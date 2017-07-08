@@ -1,6 +1,6 @@
 # Tic tac toe
 
-Go to play at [Demo](http://tictactoe.hoakusa.com) or [Codepen](https://codepen.io/hoakusa/full/GEKzKN/).
+Go to play at [Demo](http://tictactoe.hoakusa.com) or [Codepen](https://codepen.io/hoakusa/full/KqKRzg/).
 
 This game is based on classical Tic-tac-toe paper game. Here, there are 2 playes, X and O, who take turns marking the spaces in a 3x3 grid. First player who place three of their mark (same X or O) in a horizontal, vertical or diagonal row wins this game. In my game, playes will play versus computer. Hope people like it.
 
