@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+  <base href="/">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Tic tac toe</title>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css">
+  <link rel="stylesheet" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:700,800|Catamaran:200,300,500|Rock+Salt">
+  <link rel="stylesheet" href="/css/main.css">
+
+  <!-- meta description -->
+  <meta name="author" content="An Pham">
+  <meta name="robots" content="index,follow" />
+  
+  <meta name="description" content="Tic tac toe game">
+  <meta name="contact" content="hoakusa@gmail.com">
+  <meta name="copyright" content="An Pham">
+
+</head>
+<body ng-app="app" ng-controller="AppController" ng-init="onLoad()">
+
+    <div class="background" >
+  <div class="container">
+    <h1  class="header">Tic Tac Toe</h1>
+    
+    <div class="score" id="score">
+      <div class="player">Player {{game.player.score}}</div>
+      <div class="computer">Computer {{game.computer.score}}</div>
+    </div>
+    
+    <div class="turn">
+      <div id="your-turn">Your turn</div>
+      <div id="computer-turn">Computer turn</div>
+    </div>
+    
+    <div class="box">      
+      <div class="board">
+        <div id="board-frame" ng-show="isPlay"></div>
+        
+        <a class="msg" ng-show="isLoad" ng-click="start()">Start play</a>
+          
+        <div class="welcome" ng-show="isStart">
+          <div class="ask">Would you like to be X or O ?</div>
+          <div class="answer">
+            <a class="answer-x" ng-click="select(true)">X</a>
+            <a class="answer-y" ng-click="select(false)">O</a>
+          </div>
+        </div><!-- end Welcome -->
+        
+        <!-- play -->
+        <div class="play-board" id="game" ng-show="isPlay"></div>
+        
+        <!-- message -->
+        <div class="msg" ng-show="isEnd" id="msg">
+          {{msg}}
+          <a id="restart" ng-click="restart()">Replay <span class="ion-android-refresh"></span></a>
+        </div>
+        
+      </div><!-- end game -->
+    </div><!-- end box -->
+    
+  </div><!-- end container -->
+</div>
+
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script> 
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/main.js"></script>
+   
+
+</body>
+</html>
